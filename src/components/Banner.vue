@@ -69,15 +69,15 @@ section {
 			width: 100%;
 			display: flex;
 			align-items: center;
+			justify-content: space-between;
 
 			> li {
-				width: 100%;
-
 				padding: 1rem;
 
 				a {
 					display: flex;
 					align-items: center;
+					text-transform: uppercase;
 
 					img {
 						width: 56px;

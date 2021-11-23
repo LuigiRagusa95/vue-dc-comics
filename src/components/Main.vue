@@ -1,24 +1,14 @@
 <template>
 	<main>
-		<div class="container">
-			<div>
-				<section>
-					<p class="message">{{ message }}</p>
-				</section>
-			</div>
+		<div>
+			<p class="message">{{ message }}</p>
 		</div>
-		<Banner />
 	</main>
 </template>
 
 <script>
-import Banner from "./Banner.vue";
-
 export default {
 	name: "Main",
-	components: {
-		Banner,
-	},
 	data() {
 		return {
 			message: "--> Content goes here <--",
@@ -39,16 +29,10 @@ main {
 	> div {
 		@include container;
 
-		> div {
-			width: 100%;
-			display: flex;
-			flex-flow: column;
-
-			.message {
-				color: $white;
-				font-weight: 600;
-				font-size: 1.5rem;
-			}
+		.message {
+			color: $white;
+			font-weight: 600;
+			font-size: 1.5rem;
 		}
 	}
 }
