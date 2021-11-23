@@ -2,44 +2,12 @@
 	<section>
 		<div>
 			<ul>
-				<li>
+				<li v-for="(link, index) in list" :key="index">
 					<a href="#"
 						><img
-							src="../assets/images/buy-comics-digital-comics.png"
+							:src="require(`../assets/images/${link.img}`)"
 							alt="image"
-						/><span>Digital Comics</span></a
-					>
-				</li>
-				<li>
-					<a href="#"
-						><img
-							src="../assets/images/buy-comics-merchandise.png"
-							alt="image"
-						/><span>DC Merchandise</span></a
-					>
-				</li>
-				<li>
-					<a href="#"
-						><img
-							src="../assets/images/buy-comics-subscriptions.png"
-							alt="image"
-						/><span>Subscription</span></a
-					>
-				</li>
-				<li>
-					<a href="#"
-						><img
-							src="../assets/images/buy-comics-shop-locator.png"
-							alt="image"
-						/><span>Comic Shop Locator</span></a
-					>
-				</li>
-				<li>
-					<a href="#"
-						><img
-							src="../assets/images/buy-dc-power-visa.svg"
-							alt="image"
-						/><span>DC Power Visa</span></a
+						/><span>{{ link.title }}</span></a
 					>
 				</li>
 			</ul>
@@ -50,6 +18,18 @@
 <script>
 export default {
 	name: "Banner",
+	data() {
+		return {
+			// prettier-ignore
+			list: [
+				{ title: "Digital Comics",img: "buy-comics-digital-comics.png", },
+				{ title: "DC Merchandise", img: "buy-comics-merchandise.png" },
+				{ title: "Subscription", img: "buy-comics-subscriptions.png" },
+				{ title: "Comic Shop Locator",img: "buy-comics-shop-locator.png", },
+				{ title: "DC Power Visa", img: "buy-dc-power-visa.svg" },
+			],
+		};
+	},
 };
 </script>
 

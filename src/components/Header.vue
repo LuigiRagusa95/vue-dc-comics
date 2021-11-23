@@ -11,16 +11,13 @@
 			</div>
 			<nav class="navigation">
 				<ul>
-					<li><a href="#">Characters</a></li>
-					<li class="active"><a href="#">Comics</a></li>
-					<li><a href="#">Movies</a></li>
-					<li><a href="#">Tv</a></li>
-					<li><a href="#">Games</a></li>
-					<li><a href="#">Collectibles</a></li>
-					<li><a href="#">Videos</a></li>
-					<li><a href="#">Fans</a></li>
-					<li><a href="#">News</a></li>
-					<li><a href="#">Shop</a></li>
+					<li
+						v-for="(link, index) in navigationLink"
+						:key="index"
+						:class="{ active: index === 0 }"
+					>
+						<a href="#">{{ link }}</a>
+					</li>
 				</ul>
 			</nav>
 		</div>
@@ -28,7 +25,25 @@
 </template>
 
 <script>
-export default {};
+export default {
+	name: "Header",
+	data() {
+		return {
+			navigationLink: [
+				"Characters",
+				"Comics",
+				"Movies",
+				"Tv",
+				"Games",
+				"Collectibles",
+				"Videos",
+				"Fans",
+				"News",
+				"Shop",
+			],
+		};
+	},
+};
 </script>
 
 <style lang="scss" scoped>

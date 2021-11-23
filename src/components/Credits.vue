@@ -5,7 +5,7 @@
 			<nav>
 				<h3>Follow Us</h3>
 				<a href="#" v-for="(imageURL, index) in images" :key="index"
-					><img :src="imageURL" alt="image"
+					><img :src="getImage(index)" alt="image"
 				/></a>
 			</nav>
 		</div>
@@ -18,15 +18,19 @@ export default {
 	data() {
 		return {
 			images: [
-				"@/assets/images/footer-facebook.png",
-				"@/assets/images/footer-twitter.png",
-				"@/assets/images/footer-youtube.png",
-				"@/assets/images/footer-pinterest.png",
-				"@/assets/images/footer-periscope.png",
+				"footer-facebook.png",
+				"footer-twitter.png",
+				"footer-youtube.png",
+				"footer-pinterest.png",
+				"footer-periscope.png",
 			],
 		};
 	},
-	methods: {},
+	methods: {
+		getImage(index) {
+			return require(`../assets/images/${this.images[index]}`);
+		},
+	},
 };
 </script>
 

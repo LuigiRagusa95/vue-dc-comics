@@ -5,13 +5,12 @@
 				<div class="column">
 					<ul>
 						<li><h2>DC Comics</h2></li>
-						<li><a href="#">Characters</a></li>
-						<li><a href="#">Comics</a></li>
-						<li><a href="#">Movies</a></li>
-						<li><a href="#">Tv</a></li>
-						<li><a href="#">Games</a></li>
-						<li><a href="#">Videos</a></li>
-						<li><a href="#">News</a></li>
+						<li
+							v-for="(menu, index) in dcComicsMenuList"
+							:key="index"
+						>
+							<a href="#">{{ menu }}</a>
+						</li>
 					</ul>
 					<ul>
 						<li><h2>Shop</h2></li>
@@ -22,27 +21,17 @@
 				<div class="column">
 					<ul>
 						<li><h2>DC</h2></li>
-						<li><a href="#">Terms Of Use</a></li>
-						<li><a href="#">Privacy Policy</a></li>
-						<li><a href="#">Ad Choices</a></li>
-						<li><a href="#">Advertising</a></li>
-						<li><a href="#">Jobs</a></li>
-						<li><a href="#">Subscriptions</a></li>
-						<li><a href="#">Talent Workshops</a></li>
-						<li><a href="#">CPSC Certificates</a></li>
-						<li><a href="#">Ratings</a></li>
-						<li><a href="#">Shop Help</a></li>
-						<li><a href="#">Contact Us</a></li>
+						<li v-for="(menu, index) in dcMenuList" :key="index">
+							<a href="#">{{ menu }}</a>
+						</li>
 					</ul>
 				</div>
 				<div class="column">
 					<ul>
 						<li><h2>Sites</h2></li>
-						<li><a href="#">DC</a></li>
-						<li><a href="#">MAD Magazine</a></li>
-						<li><a href="#">DC Kids</a></li>
-						<li><a href="#">DC Universe</a></li>
-						<li><a href="#">DC Power Visa</a></li>
+						<li v-for="(menu, index) in dcSiteList" :key="index">
+							<a href="#">{{ menu }}</a>
+						</li>
 					</ul>
 				</div>
 			</section>
@@ -59,6 +48,39 @@ import Credits from "./Credits.vue";
 export default {
 	components: { Credits },
 	name: "Footer",
+	data() {
+		return {
+			dcComicsMenuList: [
+				"Characters",
+				"Comics",
+				"Movies",
+				"Tv",
+				"Games",
+				"Videos",
+				"News",
+			],
+			dcMenuList: [
+				"Terms Of Use",
+				"Privacy Policy",
+				"Ad Choices",
+				"Advertising",
+				"Jobs",
+				"Subscriptions",
+				"Talent Workshops",
+				"CPSC Certificates",
+				"Ratings",
+				"Shop Help",
+				"Contact Us",
+			],
+			dcSiteList: [
+				"DC",
+				"MAD Magazine",
+				"DC Kids",
+				"DC Universe",
+				"DC Power Visa",
+			],
+		};
+	},
 };
 </script>
 
@@ -66,7 +88,6 @@ export default {
 @import "../assets/scss/variable.scss";
 
 footer {
-	flex-grow: 1;
 	display: flex;
 	color: $white;
 	flex-direction: column;
