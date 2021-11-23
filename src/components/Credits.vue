@@ -4,26 +4,8 @@
 			<button>Sing-up Now</button>
 			<nav>
 				<h3>Follow Us</h3>
-				<a href="#"
-					><img
-						src="../assets/images/footer-facebook.png"
-						alt="image"
-				/></a>
-				<a href="#"
-					><img src="../assets/images/footer-twitter.png" alt="image"
-				/></a>
-				<a href="#"
-					><img src="../assets/images/footer-youtube.png" alt="image"
-				/></a>
-				<a href="#"
-					><img
-						src="../assets/images/footer-pinterest.png"
-						alt="image"
-				/></a>
-				<a href="#"
-					><img
-						src="../assets/images/footer-periscope.png"
-						alt="image"
+				<a href="#" v-for="(imageURL, index) in images" :key="index"
+					><img :src="imageURL" alt="image"
 				/></a>
 			</nav>
 		</div>
@@ -33,6 +15,18 @@
 <script>
 export default {
 	name: "Credits",
+	data() {
+		return {
+			images: [
+				"@/assets/images/footer-facebook.png",
+				"@/assets/images/footer-twitter.png",
+				"@/assets/images/footer-youtube.png",
+				"@/assets/images/footer-pinterest.png",
+				"@/assets/images/footer-periscope.png",
+			],
+		};
+	},
+	methods: {},
 };
 </script>
 
