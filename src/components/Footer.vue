@@ -50,11 +50,14 @@
 				<img src="../assets/images/dc-logo-bg.png" alt="image" />
 			</section>
 		</div>
+		<Credits />
 	</footer>
 </template>
 
 <script>
+import Credits from "./Credits.vue";
 export default {
+	components: { Credits },
 	name: "Footer",
 };
 </script>
@@ -64,7 +67,10 @@ export default {
 
 footer {
 	flex-grow: 1;
+	display: flex;
 	color: $white;
+	flex-direction: column;
+	justify-content: flex-end;
 	background: url(../assets/images/footer-bg.jpg);
 
 	> div:first-of-type {

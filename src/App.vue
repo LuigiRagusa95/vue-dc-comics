@@ -32,5 +32,6 @@ export default {
 	display: flex;
 	flex-flow: column;
 	min-height: 100vh;
+	justify-content: flex-end;
 }
 </style>
