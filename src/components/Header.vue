@@ -2,7 +2,12 @@
 	<header>
 		<div>
 			<div class="logo">
-				<img src="../assets/images/dc-logo.png" alt="dc-logo-image" />
+				<a href="#">
+					<img
+						src="../assets/images/dc-logo.png"
+						alt="dc-logo-image"
+					/>
+				</a>
 			</div>
 			<nav class="navigation">
 				<ul>
@@ -42,56 +47,56 @@ header {
 		max-width: 1280px;
 		align-items: center;
 		justify-content: space-between;
-	}
 
-	.logo {
-		width: 64px;
-		height: 64px;
+		> .logo {
+			width: 64px;
+			height: 64px;
 
-		img {
-			object-fit: contain;
+			img {
+				object-fit: contain;
+			}
 		}
-	}
 
-	.navigation {
-		display: flex;
-		font-size: 1rem;
-		line-height: 1.5rem;
-
-		ul {
+		> .navigation {
 			display: flex;
-			align-items: center;
+			font-size: 1rem;
+			line-height: 1.5rem;
 
-			li {
-				position: relative;
-				padding: 1.5rem 0.5rem;
+			ul {
+				display: flex;
+				align-items: center;
 
-				a {
-					color: $gray-500;
-					font-weight: 600;
-					text-transform: uppercase;
-					transition: color 0.1s ease;
+				li {
+					position: relative;
+					padding: 1.5rem 0.5rem;
 
-					&:hover,
-					&:focus,
-					&:active {
-						color: $blue-500;
-					}
-				}
-
-				&.active {
 					a {
-						color: $blue-500;
+						color: $gray-500;
+						font-weight: 600;
+						text-transform: uppercase;
+						transition: color 0.1s ease;
+
+						&:hover,
+						&:focus,
+						&:active {
+							color: $blue-500;
+						}
 					}
 
-					&::before {
-						left: 0;
-						top: 100%;
-						width: 100%;
-						content: "";
-						height: 0.125rem;
-						position: absolute;
-						background: $blue-500;
+					&.active {
+						a {
+							color: $blue-500;
+						}
+
+						&::before {
+							left: 0;
+							top: 100%;
+							width: 100%;
+							content: "";
+							height: 0.125rem;
+							position: absolute;
+							background: $blue-500;
+						}
 					}
 				}
 			}
