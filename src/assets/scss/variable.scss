@@ -7,3 +7,13 @@ $gray-600: #555555;
 $gray-700: #303030;
 
 $blue-500: #0282f9;
+
+@mixin container {
+	width: 100%;
+	display: flex;
+	padding: 0.5rem;
+	margin: 0 auto;
+	max-width: 1280px;
+	align-items: center;
+	justify-content: space-between;
+}

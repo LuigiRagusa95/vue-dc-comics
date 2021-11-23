@@ -40,13 +40,7 @@ header {
 	align-items: center;
 
 	> div {
-		width: 100%;
-		display: flex;
-		padding: 0.5rem;
-		margin: 0 auto;
-		max-width: 1280px;
-		align-items: center;
-		justify-content: space-between;
+		@include container;
 
 		> .logo {
 			width: 64px;
@@ -71,7 +65,7 @@ header {
 					padding: 1.5rem 0.5rem;
 
 					a {
-						color: $gray-500;
+						color: $gray-600;
 						font-weight: 600;
 						text-transform: uppercase;
 						transition: color 0.1s ease;
@@ -90,12 +84,12 @@ header {
 
 						&::before {
 							left: 0;
-							top: 100%;
 							width: 100%;
 							content: "";
-							height: 0.125rem;
+							height: 0.25rem;
 							position: absolute;
 							background: $blue-500;
+							top: calc(100% + 0.25rem);
 						}
 					}
 				}
