@@ -1,13 +1,14 @@
 <template>
 	<main>
-		<div>
-			<p class="message">{{ message }}</p>
-		</div>
+		<Series />
 	</main>
 </template>
 
 <script>
+import Series from "./Series.vue";
+
 export default {
+	components: { Series },
 	name: "Main",
 	data() {
 		return {
