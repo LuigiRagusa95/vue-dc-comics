@@ -25,7 +25,7 @@ main {
 	flex-grow: 1;
 	display: flex;
 	flex-flow: column;
-	background-color: $black;
+	background-color: $gray-800;
 
 	> div {
 		@include container;

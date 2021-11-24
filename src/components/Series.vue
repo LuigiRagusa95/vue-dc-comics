@@ -11,6 +11,7 @@
 					/>
 				</template>
 			</div>
+			<div class="section-button">Load More</div>
 		</div>
 	</section>
 </template>
@@ -41,6 +42,8 @@ section {
 
 	> div:first-of-type {
 		@include container();
+		flex-direction: column;
+		align-items: flex-start;
 
 		.section-label {
 			color: $white;
@@ -61,6 +64,16 @@ section {
 			flex-wrap: wrap;
 			margin-top: 2rem;
 			align-items: flex-start;
+		}
+
+		.section-button {
+			color: $white;
+			cursor: pointer;
+			font-weight: 600;
+			width: fit-content;
+			margin: 0 auto 2rem;
+			padding: 0.75rem 3rem;
+			background: $blue-500;
 		}
 	}
 }
