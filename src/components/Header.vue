@@ -21,11 +21,15 @@
 				</ul>
 			</nav>
 		</div>
+
+		<Hero />
 	</header>
 </template>
 
 <script>
+import Hero from "./Hero.vue";
 export default {
+	components: { Hero },
 	name: "Header",
 	data() {
 		return {
@@ -51,10 +55,11 @@ export default {
 
 header {
 	display: flex;
+	flex-flow: column;
 	background: $white;
-	align-items: center;
+	// align-items: center;
 
-	> div {
+	> div:first-child {
 		@include container;
 
 		> .logo {
